@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+  border: 0;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Krub", sans-serif;
+  background: #d2d0dd;
+  color: #686e7a;
+  font-size: 0.9rem;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+img {
+  display: block;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+a, a:active, a:visited {
+  color: #633fbd;
+  font-weight: 500;
+}
+
+.sign-in {
+  background: #fff;
+  width: 60rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.sign-in__details {
+  padding: 2rem 4rem;
+}
+.sign-in__details h1 {
+  color: #111727;
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+.sign-in__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.sign-in__extras {
+  display: flex;
+  justify-content: space-between;
+}
+.sign-in__extras div {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.sign-in__logo {
+  display: grid;
+  place-content: center;
+  background: url("../img/bg_texture.png"), #633fbd;
+  height: 100%;
+}
+.sign-in__logo div {
+  width: 22rem;
+  aspect-ratio: 1/1;
+}
+
+input:not([type=checkbox]) {
+  width: 100%;
+  border: 1px solid #d2d0dd;
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+input::-moz-placeholder {
+  color: #d2d0dd;
+}
+
+input::placeholder {
+  color: #d2d0dd;
+}
+
+label {
+  font-weight: 500;
+  color: #111727;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.btn.primary {
+  background: #633fbd;
+  color: #fff;
+}
+.btn:hover {
+  background: #111727;
+  color: #fff;
+}
+.btn img {
+  width: 1.2rem;
+}
+.btn:last-child {
+  margin-top: -0.5rem;
+}
+
+.next__page {
+  margin-top: 1rem;
+  text-align: center;
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    display: block;
+    background: #fff;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  .sign-in {
+    grid-template-columns: 1fr;
+    width: 100vw;
+    overflow: visible;
+  }
+  .sign-in__details {
+    grid-row: 2/3;
+    padding: 2rem 1.5rem;
+  }
+  .sign-in__form {
+    margin-top: 1.5rem;
+    gap: 1rem;
+  }
+  .sign-in__extras {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+  }
+  .sign-in__logo {
+    padding: 1.5rem 0;
+  }
+  .sign-in__logo div {
+    width: 12rem;
+  }
+}
